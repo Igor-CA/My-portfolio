@@ -14,6 +14,54 @@ h2{
   text-align: center;
 }
 .App{
-  background: linear-gradient(0deg, rgba(183,190,255,1) , rgba(111,116,163,1) 80%);
+  display: flex;
+  background-color: #7fc3fe;
+  min-height: 100vh;
+  color: #3b454e;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
 }
-
+.container{
+  align-self: center;
+  margin: 15px;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.362);
+  background-color: #fafafa;
+  padding: 15px;
+}.container p{
+  text-indent: 2em;
+  margin: 10px 0px;
+  line-height: 1.5em; 
+  text-align: justify;
+}
+.footer{
+  text-align: center;
+  padding: 10px;
+  color: #a0b1c5;
+  background-color: #11161d;
+}
+.footer__socials{
+  cursor: pointer;
+  font-size: 2em;
+  padding: 10px;
+}
+.footer__socials:hover{
+  transition: 300ms;
+  color: #cbe4ff;
+}
+.message{
+	font-weight: bold;
+	position: fixed;
+	top: 20px;
+	left: 50%;
+	padding: 15px;
+  color: #a0b1c5;
+  background-color: #11161d;
+	border: 1px solid #263141;
+	border-radius: 4px;
+	translate: -50%;
+	width: 420px;
+	max-width: 80vw;
+}

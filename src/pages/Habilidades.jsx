@@ -9,6 +9,12 @@ import Habilidade from "../components/Habilidade";
 
 const skills = [
 	{
+		name: "React",
+		description:
+			"O React.js é uma biblioteca JavaScript poderosa usada para desenvolver interfaces de usuário interativas e eficientes. Ele se destaca por permitir a criação de componentes reutilizáveis, simplificando o processo de construção de aplicativos web responsivos e de alto desempenho",
+		icon: faReact,
+	},
+	{
 		name: "HTML",
 		description:
 			"O HTML é uma linguagem de marcação fundamental para definir a estrutura de um site. Ele cria a base sobre a qual o conteúdo é organizado, incluindo elementos como títulos, parágrafos, imagens e links.",
@@ -25,12 +31,6 @@ const skills = [
 		description:
 			"Diferentemente do HTML e CSS, o JavaScript é uma linguagem de programação que vai além da estrutura e aparência. É responsável por adicionar funcionalidades e interatividade às páginas da web, permitindo que os usuários interajam com a aplicação, realizem validações de formulários e criem experiências dinâmicas",
 		icon: faSquareJs,
-	},
-	{
-		name: "React",
-		description:
-			"O React.js é uma biblioteca JavaScript poderosa usada para desenvolver interfaces de usuário interativas e eficientes. Ele se destaca por permitir a criação de componentes reutilizáveis, simplificando o processo de construção de aplicativos web responsivos e de alto desempenho",
-		icon: faReact,
 	},
 ];
 
