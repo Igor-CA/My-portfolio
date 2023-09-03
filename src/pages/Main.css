@@ -1,0 +1,35 @@
+.intro {
+    background: radial-gradient(closest-side, #a6adf2 , #6f74a3);
+    height: calc(100vh - 52px);
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  }
+  .intro__container{
+    width: 75%;
+    max-width: 600px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+  }
+  .intro h1 {
+    font-size: 1.5em;
+    text-transform: uppercase;
+  }
+  .intro p{
+    font-size: 5em;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: -0.02em;
+    line-height: 1.1em;
+  }
+  .intro__icons{
+    padding: 5px 10px;
+    font-size: 0.5em;
+    transition: 300ms;
+  }
+  .intro__icons:hover{
+    color: #ffffff80;
+    cursor: pointer;
+    translate: 0 -10px;
+  }

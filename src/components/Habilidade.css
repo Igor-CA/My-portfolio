@@ -1,0 +1,11 @@
+.habilidades{
+    list-style: none;
+}
+.habilidades__item{
+    display: flex;
+    align-items: center;
+}
+.habilidades__icon{
+    font-size: 5em;
+    margin-right: -20px;
+}
