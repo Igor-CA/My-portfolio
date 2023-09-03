@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faReact } from '@fortawesome/free-brands-svg-icons'
-import "./Main.css"
+import "./MainPage.css"
 export default function Main() {
 	return (
 		<div className="intro">

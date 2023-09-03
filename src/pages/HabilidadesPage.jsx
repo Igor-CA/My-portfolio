@@ -1,4 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faHtml5,
 	faCss3Alt,
@@ -39,15 +38,16 @@ export default function Habilidades() {
 		<div className="container">
 			<h2>Habilidades</h2>
 			<ul className="habilidades">
-				{skills.map(skill => {
-                    const {name, description, icon} = skill
-                    return (
-                        <Habilidade 
-                            name={name}
-                            description={description}
-                            icon={icon}></Habilidade>
-                    )
-                })}
+				{skills.map((skill) => {
+					const { name, description, icon } = skill;
+					return (
+						<Habilidade
+							name={name}
+							description={description}
+							icon={icon}
+						></Habilidade>
+					);
+				})}
 			</ul>
 		</div>
 	);

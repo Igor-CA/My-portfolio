@@ -1,11 +1,10 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
-import Main from "./pages/Main";
+import Main from "./pages/MainPage";
 import Sobre from "./pages/Sobre";
-import Habilidades from "./pages/Habilidades";
-import Projetos from "./pages/Projetos";
-import Contatos from "./pages/Contatos";
+import Habilidades from "./pages/HabilidadesPage";
+import Projetos from "./pages/ProjetosPage";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
@@ -13,20 +12,20 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
 function App() {
-	const [visibleCopyMessaga, setVisibleCopyMessaga] = useState(false)
+	const [visibleCopyMessaga, setVisibleCopyMessaga] = useState(false);
 	const handleCopy = () => {
-		navigator.clipboard.writeText("igorcaldeira.andrade@gmail.com")
-		setVisibleCopyMessaga(true)
+		navigator.clipboard.writeText("igorcaldeira.andrade@gmail.com");
+		setVisibleCopyMessaga(true);
 		setTimeout(() => {
 			setVisibleCopyMessaga(false);
 		}, 3000);
-	}
+	};
 
 	return (
 		<div className="App">
 			<BrowserRouter>
 				<NavBar></NavBar>
-				{visibleCopyMessaga?<div className="message">Email copiado com sucesso</div>:null}
+
 				<Routes>
 					<Route path="/" element={<Main></Main>}></Route>
 					<Route path="/sobre" element={<Sobre></Sobre>}></Route>
@@ -35,18 +34,23 @@ function App() {
 						element={<Habilidades></Habilidades>}
 					></Route>
 					<Route path="/projetos" element={<Projetos></Projetos>}></Route>
-					<Route path="/contatos" element={<Contatos></Contatos>}></Route>
 				</Routes>
 
 				<footer className="footer">
 					<p>Contatos</p>
-					<a href="https://github.com/Igor-CA" target="_blank" rel="noreferrer" >
-						<FontAwesomeIcon icon={faGithub} className="footer__socials"/>
+					<a href="https://github.com/Igor-CA" target="_blank" rel="noreferrer">
+						<FontAwesomeIcon icon={faGithub} className="footer__socials" />
 					</a>
-					<FontAwesomeIcon icon={faEnvelope} className="footer__socials"
+					<FontAwesomeIcon
+						icon={faEnvelope}
+						className="footer__socials"
 						onClick={handleCopy}
 					/>
 					<p>Igor Caldeira Andrade</p>
+
+					{visibleCopyMessaga ? (
+						<div className="message">Email copiado com sucesso</div>
+					) : null}
 				</footer>
 			</BrowserRouter>
 		</div>
