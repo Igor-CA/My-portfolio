@@ -3,7 +3,7 @@
 Meu portfólio. Aplicação pequena criada para mostrar os projetos que desenvolvi e irei desenvolver em minha carreira de desenvolvedor.
 ### [Demo](https://igor-ca.github.io/my-portfolio/)
 [![Demo](https://raw.githubusercontent.com/Igor-CA/my-portfolio/master/src/assets/portfolio-demo.png)
-](https://igor-ca.github.io/My-portfolio/)
+](https://igor-ca.github.io/my-portfolio/)
 
 ### Install
 
