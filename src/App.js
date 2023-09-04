@@ -35,7 +35,7 @@ function App() {
 
 	return (
 		<div className="App">
-			<BrowserRouter>
+			<BrowserRouter basename="/My-portfolio">
 				<NavBar onMobile={onMobile}></NavBar>
 
 				<Routes>

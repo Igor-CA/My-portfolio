@@ -9,7 +9,6 @@ import {
 	faList,
 	faXmark,
 } from "@fortawesome/free-solid-svg-icons";
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 import { useState } from "react";
 export default function NavBar({ onMobile }) {
