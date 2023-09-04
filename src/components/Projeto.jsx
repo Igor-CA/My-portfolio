@@ -7,7 +7,6 @@ export default function Projeto({props}) {
 	const { name, image, repositoryName, livePreviewUrl, description } = props;
 	return (
 		<div className="projeto">
-			<h3>{name}</h3>
 			<div className="projeto__cover-container">
                 <div className="projeto__links">
                     <a
@@ -29,6 +28,7 @@ export default function Projeto({props}) {
                 </div>
                 <img src={image} alt={`preview do projeto ${name}`} className="projeto__cover"/>
             </div>
+            <h3>{name}</h3>
 			<p>{description}</p>
 		</div>
 	);

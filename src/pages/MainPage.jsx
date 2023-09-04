@@ -14,7 +14,7 @@ export default function Main() {
 						</a>
 					</p>
 				</div>
-				<div className='icon-container'>
+				<div className='react-icon-container'>
 					<FontAwesomeIcon icon={faReact} className="react-icon" />
 				</div>
 			</div>

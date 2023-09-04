@@ -9,10 +9,22 @@ import Projetos from "./pages/ProjetosPage";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
 	const [visibleCopyMessaga, setVisibleCopyMessaga] = useState(false);
+
+	const [onMobile, setOnMobile] = useState(false);
+
+	useEffect(() => {
+		const handleResize = () => {
+			const onMobileScreen = window.matchMedia("(max-width: 768px)").matches;
+			setOnMobile(onMobileScreen);
+		};
+		handleResize();
+		window.addEventListener("resize", handleResize);
+	}, []);
+
 	const handleCopy = () => {
 		navigator.clipboard.writeText("igorcaldeira.andrade@gmail.com");
 		setVisibleCopyMessaga(true);
@@ -24,7 +36,7 @@ function App() {
 	return (
 		<div className="App">
 			<BrowserRouter>
-				<NavBar></NavBar>
+				<NavBar onMobile={onMobile}></NavBar>
 
 				<Routes>
 					<Route path="/" element={<Main></Main>}></Route>
@@ -33,7 +45,10 @@ function App() {
 						path="/habilidades"
 						element={<Habilidades></Habilidades>}
 					></Route>
-					<Route path="/projetos" element={<Projetos></Projetos>}></Route>
+					<Route
+						path="/projetos"
+						element={<Projetos></Projetos>}
+					></Route>
 				</Routes>
 
 				<footer className="footer">
