@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/my-portfolio/static/css/main.a62cd247.css",
-    "main.js": "/my-portfolio/static/js/main.ecdc5a2b.js",
-    "static/media/Onde esta.png": "/my-portfolio/static/media/Onde esta.672589a22bbfc7174031.png",
-    "static/media/Jogo da memória.png": "/my-portfolio/static/media/Jogo da memória.615247440a793b8e2d78.png",
-    "static/media/Shopping-cart-demo.png": "/my-portfolio/static/media/Shopping-cart-demo.51598bfb6190148ec4c2.png",
-    "static/media/todolist.png": "/my-portfolio/static/media/todolist.e259252e3a845ccb297a.png",
-    "index.html": "/my-portfolio/index.html",
-    "main.a62cd247.css.map": "/my-portfolio/static/css/main.a62cd247.css.map",
-    "main.ecdc5a2b.js.map": "/my-portfolio/static/js/main.ecdc5a2b.js.map"
+    "main.css": "/static/css/main.a62cd247.css",
+    "main.js": "/static/js/main.39215598.js",
+    "static/media/Onde esta.png": "/static/media/Onde esta.672589a22bbfc7174031.png",
+    "static/media/Jogo da memória.png": "/static/media/Jogo da memória.615247440a793b8e2d78.png",
+    "static/media/Shopping-cart-demo.png": "/static/media/Shopping-cart-demo.51598bfb6190148ec4c2.png",
+    "static/media/todolist.png": "/static/media/todolist.e259252e3a845ccb297a.png",
+    "index.html": "/index.html",
+    "main.a62cd247.css.map": "/static/css/main.a62cd247.css.map",
+    "main.39215598.js.map": "/static/js/main.39215598.js.map"
   },
   "entrypoints": [
     "static/css/main.a62cd247.css",
-    "static/js/main.ecdc5a2b.js"
+    "static/js/main.39215598.js"
   ]
 }
