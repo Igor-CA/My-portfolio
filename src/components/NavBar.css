@@ -72,10 +72,13 @@
 		background-color: #517ca2;
 		justify-content: space-evenly;
         opacity: 1;
-        
+		pointer-events: auto;
 	}
     .navbar__label{
         color: white;
+    }
+    .navbar__label:hover{
+		text-decoration: underline;
     }
     .navbar__icon{
         display: none;
