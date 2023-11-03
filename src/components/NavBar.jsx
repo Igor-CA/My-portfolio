@@ -6,33 +6,33 @@ import {
 	faBriefcase,
 	faAddressCard,
 	faBars,
-	faList,
 	faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 
 import { useState } from "react";
-export default function NavBar({ onMobile }) {
+
+function NavLink({ to, icon, label }) {
+	return (
+		<Link to={to} className="navbar__link">
+			<FontAwesomeIcon
+				icon={icon}
+				size="lg"
+				fixedWidth
+				className="navbar__icon"
+			/>
+			<span className="navbar__label">{label}</span>
+		</Link>
+	);
+}
+
+export default function NavBar() {
 	const [menuVisibility, setMenuVisibility] = useState(false);
-
-  //TODO: Remake this component pretty sure it can be done with a single render and with the use of media querries
-  const renderDesktopNavbar = () => {
-    return(
-      <nav className="navbar">
-        <ul className="navbar__list">
-          <li> <Link to="/" className="navbar__link">Inicio</Link> </li>
-          <li> <Link to="/projetos" className="navbar__link">Projetos</Link> </li>
-          <li> <Link to="/habilidades" className="navbar__link">Habilidades</Link> </li>
-          <li> <Link to="/sobre" className="navbar__link">Sobre mim</Link> </li>
-        </ul>
-      </nav>
-    )
-  }
-
-	const renderMobileNavbar = () => {
-		return (
-    <div className="mobile-menu">
+	return (
+		<div className="menu">
+			{/*This div appears only when on mobile devices */}
+			{/*Is just the hamburguer menu*/}
 			<div
-				className="hamburger"
+				className="mobile_menu navbar__icon"
 				style={{ display: menuVisibility ? "none" : "" }}
 				onClick={() => {
 					setMenuVisibility(true);
@@ -40,42 +40,31 @@ export default function NavBar({ onMobile }) {
 			>
 				<FontAwesomeIcon icon={faBars} size="2x" fixedWidth />
 			</div>
+
 			<nav
-				className={`mobile-navbar ${menuVisibility ? "visible" : ""}`}
 				onClick={() => {
 					setMenuVisibility(false);
 				}}
 			>
-				<Link to={"/"} className="mobile-navbar__button">
-					<FontAwesomeIcon icon={faHouse} />
-					<span className="mobile-navbar__label">Inicio</span>
-				</Link>
-
-				<Link to={"/projetos"} className="mobile-navbar__button">
-					<FontAwesomeIcon icon={faBriefcase} size="lg" fixedWidth />
-					<span className="mobile-navbar__label">Projetos</span>
-				</Link>
-
-				<Link to={"/habilidades"} className="mobile-navbar__button">
-					<FontAwesomeIcon icon={faList} size="lg" fixedWidth />
-					<span className="mobile-navbar__label">Habilidades</span>
-				</Link>
-
-				<Link to={"/sobre"} className="mobile-navbar__button">
-					<FontAwesomeIcon icon={faAddressCard} size="lg" fixedWidth />
-					<span className="mobile-navbar__label">Sobre mim</span>
-				</Link>
-
-				<div className="mobile-navbar__button"></div>
-
-				<div className="mobile-navbar__button__grow">
-					<FontAwesomeIcon icon={faXmark} size="lg" fixedWidth />
-          <span className="mobile-navbar__label">close</span>
-				</div>
-
+				<ul className={`navbar ${menuVisibility ? "mobile--visible" : ""}`}>
+					<li className="navbar__button">
+						<NavLink to="/" icon={faHouse} label="Inicio" />
+					</li>
+					<li className="navbar__button">
+						<NavLink to="/projetos" icon={faBriefcase} label="Projetos" />
+					</li>
+					<li className="navbar__button">
+						<NavLink to="/sobre" icon={faAddressCard} label="Sobre mim" />
+					</li>
+					<li className="navbar__button">
+						<NavLink to="/habilidades" icon={faBars} label="Habilidades" />
+					</li>
+					{/*Close icon that appears only when on mobile device*/}
+					<li className="navbar__button navbar__icon">
+						<FontAwesomeIcon icon={faXmark} size="lg" fixedWidth />
+					</li>
+				</ul>
 			</nav>
 		</div>
-		);
-	};
-  return onMobile? renderMobileNavbar() : renderDesktopNavbar()
+	);
 }
