@@ -31,8 +31,6 @@
 	justify-items: center;
 	align-items: center;
 	padding: 8px;
-
-    
 }
 .mobile--visible {
 	pointer-events: auto;
@@ -58,12 +56,12 @@
         color: #5c728a;
         position: relative;
         bottom: 0px;
-        right: 0px;
+        left: 0px;
         cursor: auto;
     }
 	.navbar {
 		display: flex;
-		width: 100vw;
+		width: 100%;
 		height: auto;
 		padding: 15px;
 		border-radius: 0;
