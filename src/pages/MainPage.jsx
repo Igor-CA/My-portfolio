@@ -6,7 +6,7 @@ export default function Main() {
 		<div className="intro">
 			<div className="intro__container">
 				<div>
-					<h1>Oi eu sou o Igor</h1>
+					<h1>Oi eu sou o Igor 👋</h1>
 					<p>
 						Desenvolvedor <br /> front-end
 						<a href="https://github.com/Igor-CA" target="_blank"  rel="noreferrer">
