@@ -35,7 +35,7 @@ const projetos = [
 		description:
 			"Jogo onde você deve encontrar os personagems que aparecem na tela no meio de uma image. Projeto simples com interação com firebase como back-end para armazenar os placares e a posição de cada personagem",
 		repositoryName: "where-is-waldo",
-		livePreviewUrl: "https://find-these-characters.web.app/",
+		livePreviewUrl: "https://find.igorcaldeira.dev",
 		image: whereIsImg,
 	},
 	{
