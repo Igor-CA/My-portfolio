@@ -5,14 +5,23 @@ import eshopImg from "../assets/Shopping-cart-demo.png";
 import whereIsImg from "../assets/Onde esta.png";
 import mernAuthImg from "../assets/mernAuthImg.png" 
 import Projeto from "../components/Projeto";
+import stringArtImg from "../assets/stringArtImg.png"
 
 const projetos = [
 	{
 		name: "Manga Shelf",
 		description:
-			'O Manga Shelf é uma aplicação web que facilita o gerenciamento de coleções de mangás (quadrinhos japoneses). É um projeto fullstack desenvolvido como freelancer com o uso de node.js, react e mongoDB. Nele é possivel criar uma conta, adicionar mangás à sua "prateleira", marcar os volumes que já possui, identificar o que falta para completar sua coleção e mais.',
+			'O Manga Shelf é uma aplicação web que facilita o gerenciamento de coleções de mangás (quadrinhos japoneses). É um projeto fullstack desenvolvido com o uso de node.js, react e mongoDB. Nele é possivel criar uma conta, adicionar mangás à sua "prateleira", marcar os volumes que já possui, identificar o que falta para completar sua coleção e mais.',
 		image: mangaShelfImg,
+		repositoryName:"manga-shelf",
 		livePreviewUrl: "https://mangashelf.com.br/",
+	},
+	{
+		name:"Sring art maker",
+		description:"Este projeto é um simples gerador de arte de cordas baseado na web. A arte de cordas, ou string art em inglês, é uma forma de arte na qual linhas são dispostas geometricamente em uma superfície fixa para criar padrões ou imagens. Tipicamente, essas linhas são criadas tensionando um fio ou cordão entre pontos fixos, como pregos ou alfinetes, formando uma composição visualmente interessante. Você pode inserir qualquer imagem e ele irá gerar uma prévia de como deve ficar e gerar todos os passos para que você possa criar sua própria peça de arte.",
+		repositoryName:"string-art-maker",
+		livePreviewUrl:"https://stringart.igorcaldeira.dev/",
+		image:stringArtImg
 	},
 	{
 		name: "Autenticação de usuários",
