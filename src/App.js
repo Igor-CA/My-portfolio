@@ -7,7 +7,7 @@ import Habilidades from "./pages/HabilidadesPage";
 import Projetos from "./pages/ProjetosPage";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { useState, useEffect } from "react";
 
@@ -45,10 +45,7 @@ function App() {
 						path="/habilidades"
 						element={<Habilidades></Habilidades>}
 					></Route>
-					<Route
-						path="/projetos"
-						element={<Projetos></Projetos>}
-					></Route>
+					<Route path="/projetos" element={<Projetos></Projetos>}></Route>
 				</Routes>
 
 				<footer className="footer">
@@ -61,6 +58,13 @@ function App() {
 						className="footer__socials"
 						onClick={handleCopy}
 					/>
+					<a
+						href="https://www.linkedin.com/in/igor-caldeira-andrade-abab0629a/"
+						target="_blank"
+						rel="noreferrer"
+					>
+						<FontAwesomeIcon icon={faLinkedin} className="footer__socials" />
+					</a>
 					<p>Igor Caldeira Andrade</p>
 
 					{visibleCopyMessaga ? (
