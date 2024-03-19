@@ -1,19 +1,20 @@
 {
   "files": {
     "main.css": "/static/css/main.12f20097.css",
-    "main.js": "/static/js/main.4f22269b.js",
-    "static/media/mangaShelfImg.png": "/static/media/mangaShelfImg.460f7ff6aeb91d20c871.png",
-    "static/media/Onde esta.png": "/static/media/Onde esta.672589a22bbfc7174031.png",
-    "static/media/Jogo da memória.png": "/static/media/Jogo da memória.615247440a793b8e2d78.png",
-    "static/media/Shopping-cart-demo.png": "/static/media/Shopping-cart-demo.51598bfb6190148ec4c2.png",
-    "static/media/todolist.png": "/static/media/todolist.e259252e3a845ccb297a.png",
-    "static/media/mernAuthImg.png": "/static/media/mernAuthImg.48f9084695e16b89914c.png",
+    "main.js": "/static/js/main.302debfb.js",
+    "static/media/Onde esta.png": "/static/media/Onde esta.c15455925ce5f209a896.png",
+    "static/media/Shopping-cart-demo.png": "/static/media/Shopping-cart-demo.174a2e35e8489a544629.png",
+    "static/media/mangaShelfImg.png": "/static/media/mangaShelfImg.f5086429f151cd90aceb.png",
+    "static/media/stringArtImg.png": "/static/media/stringArtImg.8614364405897e261300.png",
+    "static/media/Jogo da memória.png": "/static/media/Jogo da memória.e649fcf3a290e1fcb4b1.png",
+    "static/media/todolist.png": "/static/media/todolist.65f474e91b6e4ad4cce7.png",
+    "static/media/mernAuthImg.png": "/static/media/mernAuthImg.6902924fcbec43aabd21.png",
     "index.html": "/index.html",
     "main.12f20097.css.map": "/static/css/main.12f20097.css.map",
-    "main.4f22269b.js.map": "/static/js/main.4f22269b.js.map"
+    "main.302debfb.js.map": "/static/js/main.302debfb.js.map"
   },
   "entrypoints": [
     "static/css/main.12f20097.css",
-    "static/js/main.4f22269b.js"
+    "static/js/main.302debfb.js"
   ]
 }
