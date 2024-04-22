@@ -34,28 +34,30 @@ function App() {
 	};
 
 	return (
-		<div className="App">
+		<div className="bg-sky-300 min-h-svh text-slate-700">
 			<BrowserRouter>
 				<NavBar onMobile={onMobile}></NavBar>
 
-				<Routes>
-					<Route path="/" element={<Main></Main>}></Route>
-					<Route path="/sobre" element={<Sobre></Sobre>}></Route>
-					<Route
-						path="/habilidades"
-						element={<Habilidades></Habilidades>}
-					></Route>
-					<Route path="/projetos" element={<Projetos></Projetos>}></Route>
-				</Routes>
+				<div className="flex justify-center items-center px-4 py-2.5 max-w-5xl mx-auto min-h-svh">
+					<Routes>
+						<Route path="/" element={<Main></Main>}></Route>
+						<Route path="/sobre" element={<Sobre></Sobre>}></Route>
+						<Route
+							path="/habilidades"
+							element={<Habilidades></Habilidades>}
+						></Route>
+						<Route path="/projetos" element={<Projetos></Projetos>}></Route>
+					</Routes>
+				</div>
 
-				<footer className="footer">
+				<footer className="text-center p-2.5 bg-slate-600 text-white">
 					<p>Contatos</p>
 					<a href="https://github.com/Igor-CA" target="_blank" rel="noreferrer">
-						<FontAwesomeIcon icon={faGithub} className="footer__socials" />
+						<FontAwesomeIcon icon={faGithub} className="cursor-pointer text-4xl p-2.5 transition hover:text-slate-300" />
 					</a>
 					<FontAwesomeIcon
 						icon={faEnvelope}
-						className="footer__socials"
+						className="cursor-pointer text-4xl p-2.5 transition hover:text-slate-300"
 						onClick={handleCopy}
 					/>
 					<a
@@ -63,12 +65,12 @@ function App() {
 						target="_blank"
 						rel="noreferrer"
 					>
-						<FontAwesomeIcon icon={faLinkedin} className="footer__socials" />
+						<FontAwesomeIcon icon={faLinkedin} className="cursor-pointer text-4xl p-2.5 transition hover:text-slate-300" />
 					</a>
 					<p>Igor Caldeira Andrade</p>
 
 					{visibleCopyMessaga ? (
-						<div className="message">Email copiado com sucesso</div>
+						<div className="font-bold fixed top-5 p-4 text-slate-300 bg-slate-800 border-2 border-slate-600 rounded-md left-1/2 -translate-x-1/2 z-50 max-w-7xl">Email copiado com sucesso</div>
 					) : null}
 				</footer>
 			</BrowserRouter>

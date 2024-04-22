@@ -1,12 +1,22 @@
 import todoImg from "../assets/todolist.png";
 import memoryGameImg from "../assets/Jogo da memória.png";
-import mangaShelfImg from "../assets/mangaShelfImg.png";
+import mangaShelfImg from "../assets/mangaShelfImg3.png";
 import eshopImg from "../assets/Shopping-cart-demo.png";
 import whereIsImg from "../assets/Onde esta.png";
 import mernAuthImg from "../assets/mernAuthImg.png";
 import Projeto from "../components/Projeto";
 import stringArtImg from "../assets/stringArtImg.png";
 import blogImage from "../assets/blog.png";
+import { DiNodejsSmall } from "react-icons/di";
+import {
+	SiExpress,
+	SiFirebase,
+	SiJavascript,
+	SiMongodb,
+	SiTailwindcss,
+} from "react-icons/si";
+import { FaMarkdown, FaReact } from "react-icons/fa";
+import { IoLogoCss3, IoLogoHtml5 } from "react-icons/io";
 
 const projetos = [
 	{
@@ -16,6 +26,7 @@ const projetos = [
 		image: mangaShelfImg,
 		repositoryName: "manga-shelf",
 		livePreviewUrl: "https://mangashelf.com.br/",
+		icons: [<SiMongodb />, <DiNodejsSmall />, <SiExpress />, <FaReact />],
 	},
 	{
 		name: "Dev blog",
@@ -24,6 +35,12 @@ const projetos = [
 		image: blogImage,
 		repositoryName: "dev-blog",
 		livePreviewUrl: "https:/blog.igorcaldeira.dev",
+		icons: [
+			<FaReact />,
+			<FaMarkdown />,
+			<SiJavascript />,
+			<SiTailwindcss />,
+		],
 	},
 	{
 		name: "Sring art maker",
@@ -32,6 +49,7 @@ const projetos = [
 		repositoryName: "string-art-maker",
 		livePreviewUrl: "https://stringart.igorcaldeira.dev/",
 		image: stringArtImg,
+		icons: [<FaReact />, <SiJavascript />, <SiTailwindcss />],
 	},
 	{
 		name: "Autenticação de usuários",
@@ -40,6 +58,7 @@ const projetos = [
 		livePreviewUrl: "https://mern-auth.igorcaldeira.dev/",
 		repositoryName: "mern-auth-code",
 		image: mernAuthImg,
+		icons: [<SiMongodb />, <DiNodejsSmall />, <SiExpress />, <FaReact />],
 	},
 	{
 		name: "Jogo da memória",
@@ -48,6 +67,7 @@ const projetos = [
 		repositoryName: "memory-card-game",
 		livePreviewUrl: "https://igor-ca.github.io/memory-card-game/",
 		image: memoryGameImg,
+		icons: [<FaReact />],
 	},
 	{
 		name: "Onde esta?",
@@ -56,6 +76,7 @@ const projetos = [
 		repositoryName: "where-is-waldo",
 		livePreviewUrl: "https://find.igorcaldeira.dev",
 		image: whereIsImg,
+		icons: [<FaReact />, <SiFirebase />],
 	},
 	{
 		name: "Lista de tarefas",
@@ -64,6 +85,7 @@ const projetos = [
 		repositoryName: "ToDo-ToPlan",
 		livePreviewUrl: "https://igor-ca.github.io/ToDo-ToPlan/to-do-list.html",
 		image: todoImg,
+		icons: [<SiJavascript />, <IoLogoCss3 />, <IoLogoHtml5 />],
 	},
 	{
 		name: "Loja falsa",
@@ -72,19 +94,16 @@ const projetos = [
 		repositoryName: "shopping-cart",
 		livePreviewUrl: "https://igor-ca.github.io/shopping-cart/",
 		image: eshopImg,
+		icons: [<FaReact />],
 	},
 ];
 
 export default function ProjetosPage() {
 	return (
-		<div className="container">
-			<div className="projects-container">
-				{projetos.map((projeto) => {
-					return (
-						<Projeto key={projeto.name} props={projeto}></Projeto>
-					);
-				})}
-			</div>
+		<div className="bg-slate-50 max-w-fit m-auto px-4 py-2.5 rounded-md shadow-2xl grid grid-cols-2 gap-4">
+			{projetos.map((projeto) => {
+				return <Projeto key={projeto.name} props={projeto}></Projeto>;
+			})}
 		</div>
 	);
 }
