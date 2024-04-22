@@ -1,11 +1,12 @@
 import todoImg from "../assets/todolist.png";
 import memoryGameImg from "../assets/Jogo da memória.png";
-import mangaShelfImg from "../assets/mangaShelfImg.png"
+import mangaShelfImg from "../assets/mangaShelfImg.png";
 import eshopImg from "../assets/Shopping-cart-demo.png";
 import whereIsImg from "../assets/Onde esta.png";
-import mernAuthImg from "../assets/mernAuthImg.png" 
+import mernAuthImg from "../assets/mernAuthImg.png";
 import Projeto from "../components/Projeto";
-import stringArtImg from "../assets/stringArtImg.png"
+import stringArtImg from "../assets/stringArtImg.png";
+import blogImage from "../assets/blog.png";
 
 const projetos = [
 	{
@@ -13,23 +14,32 @@ const projetos = [
 		description:
 			'O Manga Shelf é uma aplicação web que facilita o gerenciamento de coleções de mangás (quadrinhos japoneses). É um projeto fullstack desenvolvido com o uso de node.js, react e mongoDB. Nele é possivel criar uma conta, adicionar mangás à sua "prateleira", marcar os volumes que já possui, identificar o que falta para completar sua coleção e mais.',
 		image: mangaShelfImg,
-		repositoryName:"manga-shelf",
+		repositoryName: "manga-shelf",
 		livePreviewUrl: "https://mangashelf.com.br/",
 	},
 	{
-		name:"Sring art maker",
-		description:"Este projeto é um simples gerador de arte de cordas baseado na web. A arte de cordas, ou string art em inglês, é uma forma de arte na qual linhas são dispostas geometricamente em uma superfície fixa para criar padrões ou imagens. Tipicamente, essas linhas são criadas tensionando um fio ou cordão entre pontos fixos, como pregos ou alfinetes, formando uma composição visualmente interessante. Você pode inserir qualquer imagem e ele irá gerar uma prévia de como deve ficar e gerar todos os passos para que você possa criar sua própria peça de arte.",
-		repositoryName:"string-art-maker",
-		livePreviewUrl:"https://stringart.igorcaldeira.dev/",
-		image:stringArtImg
+		name: "Dev blog",
+		description:
+			"Um blog criado como uma plataforma para documentar meu progresso, compartilhar meus projetos e oferecer dicas e truques enquanto aprendo ao longo do caminho. O blog possui duas linguas, opção de tema escuro ou claro e cria os posts por meio de conversão de arquivos markdown",
+		image: blogImage,
+		repositoryName: "dev-blog",
+		livePreviewUrl: "https:/blog.igorcaldeira.dev",
+	},
+	{
+		name: "Sring art maker",
+		description:
+			"Este projeto é um simples gerador de arte de cordas baseado na web. A arte de cordas, ou string art em inglês, é uma forma de arte na qual linhas são dispostas geometricamente em uma superfície fixa para criar padrões ou imagens. Tipicamente, essas linhas são criadas tensionando um fio ou cordão entre pontos fixos, como pregos ou alfinetes, formando uma composição visualmente interessante. Você pode inserir qualquer imagem e ele irá gerar uma prévia de como deve ficar e gerar todos os passos para que você possa criar sua própria peça de arte.",
+		repositoryName: "string-art-maker",
+		livePreviewUrl: "https://stringart.igorcaldeira.dev/",
+		image: stringArtImg,
 	},
 	{
 		name: "Autenticação de usuários",
 		description:
 			"um site simples de autenticação de usuário desenvolvido com a stack MERN (MongoDB, Express.js, React e Node.js) e estilizado usando o Tailwind CSS. O projeto consiste em uma página React que utiliza o React Router para facilitar a navegação no lado do cliente e se conecta a uma API simples para a manipulação de dados.",
-		livePreviewUrl:"https://mern-auth.igorcaldeira.dev/",
-		repositoryName:"mern-auth-code",	
-		image: mernAuthImg,		
+		livePreviewUrl: "https://mern-auth.igorcaldeira.dev/",
+		repositoryName: "mern-auth-code",
+		image: mernAuthImg,
 	},
 	{
 		name: "Jogo da memória",
@@ -70,7 +80,9 @@ export default function ProjetosPage() {
 		<div className="container">
 			<div className="projects-container">
 				{projetos.map((projeto) => {
-					return <Projeto key={projeto.name} props={projeto}></Projeto>;
+					return (
+						<Projeto key={projeto.name} props={projeto}></Projeto>
+					);
 				})}
 			</div>
 		</div>
